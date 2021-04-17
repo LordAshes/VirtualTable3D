@@ -1,5 +1,6 @@
 # VirtualTable3D
 Web base 3D version of Virtual Table
+(Demo video available at https://youtu.be/fZBrRo1l784)
 
 # Installation Instructions:
 1. Ensure PHP is installed
