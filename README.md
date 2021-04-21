@@ -28,7 +28,7 @@ and corresponding roll options. To be able to use this benefit, ensure that the 
 provided matches the (case sensitive) file name of a character sheet in the
 /resources/sheets folder.
 
-#Change Log:
+# Change Log
 
 2021.04.21:
 - Added support for rolling with advantage, normal and disadvantage.
