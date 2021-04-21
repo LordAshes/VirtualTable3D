@@ -27,3 +27,9 @@ Note: The value of player is also used to determine the player specific characte
 and corresponding roll options. To be able to use this benefit, ensure that the name
 provided matches the (case sensitive) file name of a character sheet in the
 /resources/sheets folder.
+
+#Change Log:
+2021.04.21:
+- Added support for rolling with advantage, normal and disadvantage.
+- Added radio input selection for advantage (Adv), normal (Nor), or disadvantage (Dis).
+- Based on the radio input selection the roll's Nor() is change to Adv(), Nor() or Dis().
