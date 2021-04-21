@@ -13,6 +13,10 @@
 			{
 				var specs = document.getElementById("Roll").value;
 				document.getElementById("Roll").value = "";
+				
+				if(document.getElementById("Adv").checked==true){while(specs.indexOf("Nor(")>=0){specs = specs.replace("Nor(","Adv(");}}
+				if(document.getElementById("Dis").checked==true){while(specs.indexOf("Nor(")>=0){specs = specs.replace("Nor(","Dis(");}}
+				
 				notify(player+" Rolled "+roll(specs, character),10000);
 			}
 
@@ -46,6 +50,10 @@
 			
 			function resolveAdvAndDis(specs)
 			{
+				while(specs.indexOf("Nor(")>-1)
+				{
+					specs = specs.replace("Nor(","(");
+				}
 				while(specs.indexOf("Adv(")>-1)
 				{
 					var roll = specs.substring(specs.indexOf("Adv(")+4);
