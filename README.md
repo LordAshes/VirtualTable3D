@@ -29,6 +29,7 @@ provided matches the (case sensitive) file name of a character sheet in the
 /resources/sheets folder.
 
 #Change Log:
+
 2021.04.21:
 - Added support for rolling with advantage, normal and disadvantage.
 - Added radio input selection for advantage (Adv), normal (Nor), or disadvantage (Dis).
