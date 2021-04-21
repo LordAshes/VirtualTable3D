@@ -22,3 +22,8 @@ http://127.0.0.1:8000/?player=name&module=Test3
 Where "127.0.0.1" can be replaced with the WAN IP for the server.
 Where name is replaced with a unique identification of the player (anything but "GM").
 Where "Test3" is the module that is loaded (Test3.txt in resources/modules)
+
+Note: The value of player is also used to determine the player specific character sheet
+and corresponding roll options. To be able to use this benefit, ensure that the name
+provided matches the (case sensitive) file name of a character sheet in the
+/resources/sheets folder.
