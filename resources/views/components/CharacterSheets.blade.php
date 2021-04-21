@@ -5,9 +5,18 @@
 			updateCall(function(content)
 			{
 				eval(content);
+				
+				var rollType = document.createElement("div");
+				var content = "<input type=radio name='rollType' id=Adv value='Adv'><label for='Adv'>Adv</label>"
+							+ "<input type=radio name='rollType' id=Nor value='Nor' checked=true><label for='Nor'>Nor</label>"
+							+ "<input type=radio name='rollType' id=Dis value='Dis'><label for='Dis'>Dis</label>";
+				rollType.innerHTML = content;
+				rollType.style ='Position: Absolute; Left: 1755px; Top: 10px; color: yellow;';
+				document.body.appendChild(rollType);
+				
 				var options = document.createElement("select");
 				options.id = "options";
-				options.style = "Position: Absolute; Left: 1775px; Top: 20px; color: yellow; background-color: blue;"; 
+				options.style = "Position: Absolute; Left: 1760px; Top: 35px; color: yellow; background-color: blue;"; 
 				options.addEventListener("change",function(e)
 				{
 					if(document.getElementById("options").value!="Select Roll")
