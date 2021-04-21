@@ -2,6 +2,12 @@
 
 @section('module3D')
 
+		<style>
+			.Failure {color: red; font-weight: bold;}
+			.Success {color: green; font-weight: bold;}
+			.Normal {color: yellow; font-weight: bold;}
+		</style>
+		
 		<input type=hidden id="_token" name="_token" value="{{ csrf_token() }}" /> 
 
 		<script type="module">
@@ -16,7 +22,7 @@
 			var gm = (player=="GM");
 			
 			@include("components\Common");
-																					
+																								
 			@include("components\Scene");
 			
 			@include("components\Updates");
@@ -28,6 +34,8 @@
 			@include("components\Notify");
 																					
 			@include("components\Dice");
+			
+			@include("components\CharacterSheets");
 			
 			function bounded(last,min,max)
 			{
@@ -41,5 +49,5 @@
 			}
 								
 		</script>
-
+		
 @endsection
