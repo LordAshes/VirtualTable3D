@@ -21,9 +21,10 @@
 				{
 					if(document.getElementById("options").value!="Select Roll")
 					{
-						document.getElementById("Roll").value = document.getElementById("options").value;
+						var skill = document.getElementById("options").value;
+						document.getElementById("Roll").value = rolls[skill];
 						document.getElementById("options").value = "";
-						onRollChange(null);
+						onRollExecute(null,skill);
 					}
 				});
 										
@@ -32,7 +33,7 @@
 					var option = document.createElement("option");
 					option.id = key;
 					option.text = key;
-					option.value = rolls[key];
+					option.value = key;
 					options.appendChild(option);
 				}	
 			
