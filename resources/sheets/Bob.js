@@ -47,43 +47,47 @@ character =
 //
 // The "roll" variable holds all the rolls that will be available to the user in the roll pulldown.
 // Rolls can access character values by including the (case sensitive) value name in brace brackets.
+// A roll surrounded by the Nor() function allows toggling of Disadvantage, Normal and Advantage rolling.
+// The portion in the Nor() function will be rolled twice if the current roll option is Adv or Dis and
+// either the higher or lower value will be taken depending on the roll option. Anything outside the
+// Nor() function will be rolled/calculated only once.
 //
 rolls =
 {
-	"STR": "1D20+{STR}",
-	"DEX": "1D20+{DEX}",
-	"CON": "1D20+{CON}",
-	"INT": "1D20+{INT}",
-	"WIS": "1D20+{WIS}",
-	"CHA": "1D20+{CHA}",
+	"STR": "Nor(1D20)+{STR}",
+	"DEX": "Nor(1D20)+{DEX}",
+	"CON": "Nor(1D20)+{CON}",
+	"INT": "Nor(1D20)+{INT}",
+	"WIS": "Nor(1D20)+{WIS}",
+	"CHA": "Nor(1D20)+{CHA}",
 	
-	"STR Save": "1D20+{STR.Save}",
-	"DEX Save": "1D20+{DEX.Save}",
-	"CON Save": "1D20+{CON.Save}",
-	"INT Save": "1D20+{INT.Save}",
-	"WIS Save": "1D20+{WIS.Save}",
-	"CHA Save": "1D20+{CHA.Save}",
+	"STR Save": "Nor(1D20)+{STR.Save}",
+	"DEX Save": "Nor(1D20)+{DEX.Save}",
+	"CON Save": "Nor(1D20)+{CON.Save}",
+	"INT Save": "Nor(1D20)+{INT.Save}",
+	"WIS Save": "Nor(1D20)+{WIS.Save}",
+	"CHA Save": "Nor(1D20)+{CHA.Save}",
 	
-	"Athletics": "1D20+{Athletics}",
-	"Acrobatics": "1D20+{PB}+{Acrobatics}",
-	"Slight Of Hand": "1D20+{PB}+{Slight Of Hand}",
-	"Stealth": "1D20+{Stealth}",
-	"Arcana": "1D20+{Arcana}",
-	"History": "1D20+{History}",
-	"Investigation": "1D20+{Investigation}",
-	"Nature": "1D20+{Nature}",
-	"Religion": "1D20+{Religion}",
-	"Animal Handling": "1D20+{PB}+{Animal Handling}",
-	"Insight": "1D20+{Insight}",
-	"Medicine": "1D20+{Medicine}",
-	"Perception": "1D20+{Perception}",
-	"Survival": "1D20+{Survival}",
-	"Deception": "1D20+{Deception}",
-	"Intimidation": "1D20+{PB}+{Intimidation}",
-	"Performance": "1D20+{Performance}",
-	"Persuasion": "1D20+{Persuasion}",
+	"Athletics": "Nor(1D20)+{Athletics}",
+	"Acrobatics": "Nor(1D20)+{PB}+{Acrobatics}",
+	"Slight Of Hand": "Nor(1D20)+{PB}+{Slight Of Hand}",
+	"Stealth": "Nor(1D20)+{Stealth}",
+	"Arcana": "Nor(1D20)+{Arcana}",
+	"History": "Nor(1D20)+{History}",
+	"Investigation": "Nor(1D20)+{Investigation}",
+	"Nature": "Nor(1D20)+{Nature}",
+	"Religion": "Nor(1D20)+{Religion}",
+	"Animal Handling": "Nor(1D20)+{PB}+{Animal Handling}",
+	"Insight": "Nor(1D20)+{Insight}",
+	"Medicine": "Nor(1D20)+{Medicine}",
+	"Perception": "Nor(1D20)+{Perception}",
+	"Survival": "Nor(1D20)+{Survival}",
+	"Deception": "Nor(1D20)+{Deception}",
+	"Intimidation": "Nor(1D20)+{PB}+{Intimidation}",
+	"Performance": "Nor(1D20)+{Performance}",
+	"Persuasion": "Nor(1D20)+{Persuasion}",
 	
-	"Attack": "1D20+{Attack}",
+	"Attack": "Nor(1D20)+{Attack}",
 	"Spell.DC": "{Spell.DC}",
 	
 	"Damage": "1D4+1"
