@@ -30,7 +30,13 @@ provided matches the (case sensitive) file name of a character sheet in the
 
 # Change Log
 
-2021.04.21:
+2021.04.25:
+- Added support for a chat style notification system that shows the last N entries as opposed to just the last entry.
+- Added support to toggle between viewing one last notification entry and viewing the last N entries (by clicking the notifcation)
+- Modified the notification system to show an abridged version of the roll but show the roll details when mouse is moved over the notification message
+- Updated sample character sheet to make use for the Adv, Nor or Dis roll selection.
+
+2023.04.21:
 - Added support for rolling with advantage, normal and disadvantage.
 - Added radio input selection for advantage (Adv), normal (Nor), or disadvantage (Dis).
 - Based on the radio input selection the roll's Nor() is change to Adv(), Nor() or Dis().
