@@ -11,13 +11,18 @@
 			
 			function onRollChange(e)
 			{
+				onRollExecute(e, "Custom")
+			}
+			
+			function onRollExecute(e,skill)
+			{
 				var specs = document.getElementById("Roll").value;
 				document.getElementById("Roll").value = "";
 				
 				if(document.getElementById("Adv").checked==true){while(specs.indexOf("Nor(")>=0){specs = specs.replace("Nor(","Adv(");}}
 				if(document.getElementById("Dis").checked==true){while(specs.indexOf("Nor(")>=0){specs = specs.replace("Nor(","Dis(");}}
 				
-				notify(player+" Rolled "+roll(specs, character),10000);
+				notify("["+player+"] "+skill+": " +roll(specs, character),10000);
 			}
 
 			function roll(specs, info)
@@ -82,11 +87,11 @@
 					var attribText = attrib.substring(1,attrib.length-1);
 					if(info[attribText]!=undefined)
 					{
-						specs = specs.replace(attrib,"<!-- "+attribText.toLowerCase()+" --><SPAN class='Normal'>["+info[attribText]+"]</SPAN>");
+						specs = specs.replace(attrib,"<!-- "+attribText.toLowerCase()+" -->[<SPAN class='Normal'>"+info[attribText]+"</SPAN>]");
 					}
 					else
 					{
-						specs = specs.replace(attrib,"<!-- "+attribText.toLowerCase()+" --><SPAN class='Failure'>[0]</SPAN>");
+						specs = specs.replace(attrib,"<!-- "+attribText.toLowerCase()+" -->[<SPAN class='Failure'>0</SPAN>]");
 					}						
 				}
 				return specs;
