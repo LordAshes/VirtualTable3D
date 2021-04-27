@@ -30,6 +30,11 @@ provided matches the (case sensitive) file name of a character sheet in the
 
 # Change Log
 
+2021.04.26:
+- Updated rolls to support multi line rolls
+- Updated rolls to format output into a graphical box
+- Increased number of roll lines (but decreased overall visible number since rolls use a min of 3 lines)
+
 2021.04.25:
 - Added support for a chat style notification system that shows the last N entries as opposed to just the last entry.
 - Added support to toggle between viewing one last notification entry and viewing the last N entries (by clicking the notifcation)
