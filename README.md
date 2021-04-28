@@ -14,16 +14,16 @@ PHP artisan serve
 http://127.0.0.1:8000/?player=GM&module=Forest
 
 Where "127.0.0.1" can be replaced with the WAN IP for the server.
-Where "GM" is the player name. Use "GM" for GM priviledges. Otherwise use the name that matches the corresponding character sheet.
+Where "GM" identifies the user as a Game Master allowing access to GM priviledges.
 Where "Forest" is the module that is loaded (Forest.txt in resources/modules)
 To use the sample character sheet, use the name Bob.
 
 # Launching The VirtualTable3D Session for Players
-http://127.0.0.1:8000/?player=name&module=Test3
+http://127.0.0.1:8000/?player=name&module=Forest
 
 Where "127.0.0.1" can be replaced with the WAN IP for the server.
 Where name is replaced with a unique identification of the player (anything but "GM").
-Where "Test3" is the module that is loaded (Test3.txt in resources/modules)
+Where "Forest" is the module that is loaded (Forest.txt in resources/modules)
 
 Note: The value of player is also used to determine the player specific character sheet
 and corresponding roll options. To be able to use this benefit, ensure that the name
