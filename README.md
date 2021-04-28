@@ -11,10 +11,12 @@ Web base 3D version of Virtual Table
 PHP artisan serve
 
 # Launching The VirtualTable3D Session for GM
-http://127.0.0.1:8000/?player=GM&module=Test3
+http://127.0.0.1:8000/?player=GM&module=Forest
 
 Where "127.0.0.1" can be replaced with the WAN IP for the server.
-Where "Test3" is the module that is loaded (Test3.txt in resources/modules)
+Where "GM" is the player name. Use "GM" for GM priviledges. Otherwise use the name that matches the corresponding character sheet.
+Where "Forest" is the module that is loaded (Forest.txt in resources/modules)
+To use the sample character sheet, use the name Bob.
 
 # Launching The VirtualTable3D Session for Players
 http://127.0.0.1:8000/?player=name&module=Test3
